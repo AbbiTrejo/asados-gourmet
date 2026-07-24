@@ -1,17 +1,17 @@
 import { Flame, Globe, Send, Share2 } from 'lucide-react'
 
 const nav = [
-  { label: 'Services', href: '#services' },
-  { label: 'Packages', href: '#packages' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Reviews', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Servicios', href: '#services' },
+  { label: 'Paquetes', href: '#packages' },
+  { label: 'Galería', href: '#gallery' },
+  { label: 'Reseñas', href: '#testimonials' },
+  { label: 'Contacto', href: '#contact' },
 ]
 
 const socials = [
-  { label: 'Follow us online', href: '#', icon: Globe },
-  { label: 'Message us', href: '#', icon: Send },
-  { label: 'Share', href: '#', icon: Share2 },
+  { label: 'Síguenos en línea', href: '#', icon: Globe },
+  { label: 'Escríbenos', href: '#', icon: Send },
+  { label: 'Compartir', href: '#', icon: Share2 },
 ]
 
 export function Footer() {
@@ -25,13 +25,13 @@ export function Footer() {
               Asados Gourmet
             </a>
             <p className="mt-4 max-w-xs leading-relaxed">
-              Premium live-fire barbecue catering, crafting unforgettable feasts
-              for life&apos;s finest gatherings.
+              Catering de asado premium al fuego, creando banquetes inolvidables
+              para las mejores reuniones de la vida.
             </p>
           </div>
 
           <div className="md:justify-self-center">
-            <h3 className="font-serif text-lg font-semibold text-white">Explore</h3>
+            <h3 className="font-serif text-lg font-semibold text-white">Explorar</h3>
             <ul className="mt-4 space-y-3">
               {nav.map((item) => (
                 <li key={item.href}>
@@ -44,7 +44,7 @@ export function Footer() {
           </div>
 
           <div className="md:justify-self-end">
-            <h3 className="font-serif text-lg font-semibold text-white">Follow the Fire</h3>
+            <h3 className="font-serif text-lg font-semibold text-white">Sigue el Fuego</h3>
             <div className="mt-4 flex gap-3">
               {socials.map((social) => (
                 <a
@@ -57,14 +57,14 @@ export function Footer() {
                 </a>
               ))}
             </div>
-            <p className="mt-6 text-sm">hello@asadosgourmet.com</p>
+            <p className="mt-6 text-sm">hola@asadosgourmet.com</p>
             <p className="text-sm">(555) 012-3456</p>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Asados Gourmet. All rights reserved.</p>
-          <p>Crafted with fire &amp; passion.</p>
+          <p>&copy; {new Date().getFullYear()} Asados Gourmet. Todos los derechos reservados.</p>
+          <p>Hecho con fuego y pasión.</p>
         </div>
       </div>
     </footer>

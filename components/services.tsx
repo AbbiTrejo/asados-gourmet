@@ -4,39 +4,39 @@ import { Reveal } from '@/components/reveal'
 const services = [
   {
     icon: Flame,
-    title: 'Live-Fire Grilling',
+    title: 'Asado en Vivo',
     description:
-      'Our grill masters cook on-site over open flame and embers, filling your event with the aroma and theater of authentic asado.',
+      'Nuestros parrilleros cocinan en el lugar sobre fuego y brasas, llenando tu evento con el aroma y el espectáculo del asado auténtico.',
   },
   {
     icon: Beef,
-    title: 'Premium Cuts',
+    title: 'Cortes Premium',
     description:
-      'Hand-selected, ethically sourced beef, lamb, pork and chorizo, aged and seasoned to bring out deep, smoky flavor.',
+      'Carne, cordero, cerdo y chorizo seleccionados a mano y de origen responsable, madurados y sazonados para lograr un sabor profundo y ahumado.',
   },
   {
     icon: UtensilsCrossed,
-    title: 'Full-Service Menus',
+    title: 'Menús Completos',
     description:
-      'Curated menus with grilled vegetables, artisan sides, fresh salads and chimichurri made from scratch daily.',
+      'Menús cuidados con verduras a la parrilla, guarniciones artesanales, ensaladas frescas y chimichurri hecho a diario.',
   },
   {
     icon: Users,
-    title: 'Events of Any Size',
+    title: 'Eventos de Todo Tamaño',
     description:
-      'From intimate backyard dinners to weddings and corporate galas of 500+ guests, we scale the fire to fit the occasion.',
+      'Desde cenas íntimas en el jardín hasta bodas y galas corporativas de más de 500 invitados, adaptamos el fuego a la ocasión.',
   },
   {
     icon: Truck,
-    title: 'Full Setup & Cleanup',
+    title: 'Montaje y Limpieza',
     description:
-      'We handle equipment, staffing, service and cleanup so you can relax and enjoy your celebration stress-free.',
+      'Nos encargamos del equipo, el personal, el servicio y la limpieza para que disfrutes tu celebración sin preocupaciones.',
   },
   {
     icon: Wine,
-    title: 'Pairings & Extras',
+    title: 'Maridajes y Extras',
     description:
-      'Optional wine pairings, dessert stations and signature cocktails to complete a truly gourmet experience.',
+      'Maridajes de vino opcionales, estaciones de postres y cócteles de autor para completar una experiencia verdaderamente gourmet.',
   },
 ]
 
@@ -46,14 +46,14 @@ export function Services() {
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            What We Do
+            Qué Hacemos
           </p>
           <h2 className="font-serif text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl">
-            Crafted Around the Flame
+            Creado en Torno al Fuego
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-pretty text-muted-foreground">
-            Every detail of your event is built on decades of grilling mastery
-            and a passion for hospitality.
+            Cada detalle de tu evento se construye sobre décadas de maestría
+            en la parrilla y una pasión por la hospitalidad.
           </p>
         </Reveal>
 

@@ -16,9 +16,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Asados Gourmet | Premium Barbecue Catering',
+  title: 'Asados Gourmet | Catering de Asado Premium',
   description:
-    'Asados Gourmet brings the art of the fire to your event. Premium barbecue catering with hand-selected cuts, expert grill masters, and unforgettable flavor.',
+    'Asados Gourmet lleva el arte del fuego a tu evento. Catering de asado premium con cortes seleccionados a mano, parrilleros expertos y un sabor inolvidable.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -49,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} bg-background`}>
+    <html lang="es" className={`${playfair.variable} ${inter.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

@@ -4,46 +4,46 @@ import { Reveal } from '@/components/reveal'
 
 const packages = [
   {
-    name: 'The Backyard',
+    name: 'El Jardín',
     price: '$38',
-    unit: 'per guest',
-    description: 'Intimate gatherings and family celebrations.',
+    unit: 'por invitado',
+    description: 'Reuniones íntimas y celebraciones familiares.',
     features: [
-      'Choice of 2 premium cuts',
-      'Grilled seasonal vegetables',
-      '2 artisan sides & fresh salad',
-      'House-made chimichurri',
-      'On-site grill master',
+      'Elección de 2 cortes premium',
+      'Verduras de estación a la parrilla',
+      '2 guarniciones artesanales y ensalada fresca',
+      'Chimichurri de la casa',
+      'Parrillero en el lugar',
     ],
     featured: false,
   },
   {
-    name: 'The Signature',
+    name: 'El Insignia',
     price: '$62',
-    unit: 'per guest',
-    description: 'Our most-loved experience for weddings & milestones.',
+    unit: 'por invitado',
+    description: 'Nuestra experiencia más querida para bodas y grandes momentos.',
     features: [
-      'Choice of 4 premium cuts',
-      'Provoleta & grilled vegetables',
-      '4 artisan sides & 2 salads',
-      'Chimichurri & salsa bar',
-      'Dedicated service staff',
-      'Full setup & cleanup',
+      'Elección de 4 cortes premium',
+      'Provoleta y verduras a la parrilla',
+      '4 guarniciones artesanales y 2 ensaladas',
+      'Barra de chimichurri y salsas',
+      'Personal de servicio dedicado',
+      'Montaje y limpieza completos',
     ],
     featured: true,
   },
   {
-    name: 'The Gran Asado',
+    name: 'El Gran Asado',
     price: '$95',
-    unit: 'per guest',
-    description: 'A lavish live-fire feast for the finest occasions.',
+    unit: 'por invitado',
+    description: 'Un banquete al fuego suntuoso para las ocasiones más especiales.',
     features: [
-      'Full parrilla spread of 6+ cuts',
-      'Whole roasted specialties',
-      'Gourmet sides & grazing table',
-      'Wine pairing & cocktails',
-      'Dessert station',
-      'Premium tableware & staff',
+      'Parrillada completa de más de 6 cortes',
+      'Especialidades asadas enteras',
+      'Guarniciones gourmet y mesa de picoteo',
+      'Maridaje de vinos y cócteles',
+      'Estación de postres',
+      'Vajilla premium y personal',
     ],
     featured: false,
   },
@@ -55,14 +55,14 @@ export function Packages() {
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            Our Packages
+            Nuestros Paquetes
           </p>
           <h2 className="font-serif text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl">
-            Choose Your Feast
+            Elige tu Banquete
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-pretty text-muted-foreground">
-            Transparent, all-inclusive pricing. Every package can be tailored to
-            your menu, dietary needs and guest count.
+            Precios transparentes y todo incluido. Cada paquete se adapta a tu
+            menú, necesidades dietéticas y número de invitados.
           </p>
         </Reveal>
 
@@ -80,7 +80,7 @@ export function Packages() {
                 {pkg.featured && (
                   <span className="absolute -top-4 left-1/2 inline-flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary-foreground shadow-lg">
                     <Flame className="h-3.5 w-3.5" aria-hidden="true" />
-                    Most Popular
+                    Más Popular
                   </span>
                 )}
 
@@ -118,7 +118,7 @@ export function Packages() {
                       : 'border border-border bg-background text-foreground hover:border-primary/50',
                   )}
                 >
-                  Book This Package
+                  Reservar este Paquete
                 </a>
               </div>
             </Reveal>

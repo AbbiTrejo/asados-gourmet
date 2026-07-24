@@ -2,12 +2,12 @@ import { Reveal } from '@/components/reveal'
 import { cn } from '@/lib/utils'
 
 const images = [
-  { src: '/images/gallery-1.png', alt: 'Grilled ribeye steak with rosemary on a wooden board', span: 'lg:row-span-2' },
-  { src: '/images/gallery-2.png', alt: 'Grill master tending a large parrilla at an event', span: '' },
-  { src: '/images/gallery-4.png', alt: 'Chorizo sausages grilling over flames', span: '' },
-  { src: '/images/gallery-3.png', alt: 'Elegant outdoor barbecue dinner table setting', span: 'lg:col-span-2' },
-  { src: '/images/gallery-5.png', alt: 'Grilled provoleta cheese and vegetables in a skillet', span: '' },
-  { src: '/images/gallery-6.png', alt: 'Guests enjoying an upscale outdoor barbecue party at dusk', span: '' },
+  { src: '/images/gallery-1.png', alt: 'Bife de chorizo a la parrilla con romero sobre una tabla de madera', span: 'lg:row-span-2' },
+  { src: '/images/gallery-2.png', alt: 'Parrillero atendiendo una gran parrilla en un evento', span: '' },
+  { src: '/images/gallery-4.png', alt: 'Chorizos asándose sobre las llamas', span: '' },
+  { src: '/images/gallery-3.png', alt: 'Elegante mesa de cena al aire libre para un asado', span: 'lg:col-span-2' },
+  { src: '/images/gallery-5.png', alt: 'Provoleta y verduras a la parrilla en una sartén de hierro', span: '' },
+  { src: '/images/gallery-6.png', alt: 'Invitados disfrutando de una fiesta de asado al atardecer', span: '' },
 ]
 
 export function Gallery() {
@@ -16,13 +16,13 @@ export function Gallery() {
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            Gallery
+            Galería
           </p>
           <h2 className="font-serif text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl">
-            Straight From the Coals
+            Directo de las Brasas
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-pretty text-muted-foreground">
-            A glimpse of the flavor, fire and moments we bring to every table.
+            Un vistazo al sabor, el fuego y los momentos que llevamos a cada mesa.
           </p>
         </Reveal>
 

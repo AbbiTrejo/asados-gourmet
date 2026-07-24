@@ -4,21 +4,21 @@ import { Reveal } from '@/components/reveal'
 const testimonials = [
   {
     quote:
-      'Asados Gourmet turned our wedding into a feast our guests still talk about. The grill master was pure showmanship and the flavors were unreal.',
-    name: 'Sofia & Mateo',
-    role: 'Wedding, 180 guests',
+      'Asados Gourmet convirtió nuestra boda en un banquete del que los invitados aún hablan. El parrillero fue puro espectáculo y los sabores, increíbles.',
+    name: 'Sofía y Mateo',
+    role: 'Boda, 180 invitados',
   },
   {
     quote:
-      'The most professional catering team we have hired. From setup to the final bite, everything was flawless. The ribeye was cooked to perfection.',
+      'El equipo de catering más profesional que hemos contratado. Desde el montaje hasta el último bocado, todo fue impecable. El bife quedó perfecto.',
     name: 'Daniel Reyes',
-    role: 'Corporate Gala',
+    role: 'Gala Corporativa',
   },
   {
     quote:
-      'Our backyard birthday felt like a five-star restaurant. Fresh chimichurri, incredible cuts, and zero cleanup for us. Absolutely worth it.',
-    name: 'Carla Mendez',
-    role: 'Private Celebration',
+      'Nuestro cumpleaños en el jardín se sintió como un restaurante de cinco estrellas. Chimichurri fresco, cortes increíbles y cero limpieza para nosotros. Totalmente vale la pena.',
+    name: 'Carla Méndez',
+    role: 'Celebración Privada',
   },
 ]
 
@@ -38,14 +38,14 @@ export function Testimonials() {
       <div className="relative mx-auto max-w-6xl px-5 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            Testimonials
+            Testimonios
           </p>
           <h2 className="font-serif text-3xl font-bold text-balance text-white sm:text-4xl lg:text-5xl">
-            Loved by Our Guests
+            Amado por Nuestros Invitados
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-pretty text-white/70">
-            Real words from the hosts who trusted us with their most important
-            gatherings.
+            Palabras reales de los anfitriones que confiaron en nosotros para
+            sus reuniones más importantes.
           </p>
         </Reveal>
 
@@ -54,7 +54,7 @@ export function Testimonials() {
             <Reveal key={t.name} delay={i * 100}>
               <figure className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
                 <Quote className="h-8 w-8 text-primary" aria-hidden="true" />
-                <div className="mt-4 flex gap-1" aria-label="Rated 5 out of 5 stars">
+                <div className="mt-4 flex gap-1" aria-label="Calificado 5 de 5 estrellas">
                   {Array.from({ length: 5 }).map((_, s) => (
                     <Star key={s} className="h-4 w-4 fill-primary text-primary" aria-hidden="true" />
                   ))}

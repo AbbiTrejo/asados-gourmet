@@ -5,12 +5,12 @@ import { CheckCircle2, Mail, MapPin, Phone } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 
 const eventTypes = [
-  'Wedding',
-  'Corporate Event',
-  'Birthday',
-  'Private Dinner',
-  'Anniversary',
-  'Other',
+  'Boda',
+  'Evento Corporativo',
+  'Cumpleaños',
+  'Cena Privada',
+  'Aniversario',
+  'Otro',
 ]
 
 export function ContactForm() {
@@ -27,14 +27,14 @@ export function ContactForm() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Get in Touch
+              Contáctanos
             </p>
             <h2 className="font-serif text-3xl font-bold text-balance text-foreground sm:text-4xl lg:text-5xl">
-              Let&apos;s Plan Your Asado
+              Planeemos tu Asado
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-pretty text-muted-foreground">
-              Tell us about your event and we&apos;ll craft a custom proposal
-              within 24 hours. No obligations, just great fire and flavor.
+              Cuéntanos sobre tu evento y crearemos una propuesta personalizada
+              en menos de 24 horas. Sin compromiso, solo buen fuego y sabor.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -43,7 +43,7 @@ export function ContactForm() {
                   <Phone className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="font-semibold text-foreground">Call Us</p>
+                  <p className="font-semibold text-foreground">Llámanos</p>
                   <p className="text-muted-foreground">(555) 012-3456</p>
                 </div>
               </div>
@@ -52,8 +52,8 @@ export function ContactForm() {
                   <Mail className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="font-semibold text-foreground">Email Us</p>
-                  <p className="text-muted-foreground">hello@asadosgourmet.com</p>
+                  <p className="font-semibold text-foreground">Escríbenos</p>
+                  <p className="text-muted-foreground">hola@asadosgourmet.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -61,8 +61,8 @@ export function ContactForm() {
                   <MapPin className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="font-semibold text-foreground">Service Area</p>
-                  <p className="text-muted-foreground">Greater metro area &amp; beyond</p>
+                  <p className="font-semibold text-foreground">Zona de Servicio</p>
+                  <p className="text-muted-foreground">Área metropolitana y alrededores</p>
                 </div>
               </div>
             </div>
@@ -74,47 +74,48 @@ export function ContactForm() {
                 <div className="flex h-full min-h-80 flex-col items-center justify-center text-center">
                   <CheckCircle2 className="h-16 w-16 text-primary" aria-hidden="true" />
                   <h3 className="mt-5 font-serif text-2xl font-bold text-card-foreground">
-                    Request Received!
+                    ¡Solicitud Recibida!
                   </h3>
                   <p className="mt-3 max-w-sm text-muted-foreground">
-                    Thank you for reaching out. Our team will be in touch within
-                    24 hours to start planning your unforgettable asado.
+                    Gracias por contactarnos. Nuestro equipo se comunicará
+                    contigo en menos de 24 horas para comenzar a planear tu
+                    asado inolvidable.
                   </p>
                   <button
                     type="button"
                     onClick={() => setSubmitted(false)}
                     className="mt-6 text-sm font-semibold text-primary hover:underline"
                   >
-                    Send another request
+                    Enviar otra solicitud
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid gap-5 sm:grid-cols-2">
-                    <Field label="Name" htmlFor="name">
+                    <Field label="Nombre" htmlFor="name">
                       <input
                         id="name"
                         name="name"
                         type="text"
                         required
-                        placeholder="Your full name"
+                        placeholder="Tu nombre completo"
                         className="form-input"
                       />
                     </Field>
-                    <Field label="Email" htmlFor="email">
+                    <Field label="Correo" htmlFor="email">
                       <input
                         id="email"
                         name="email"
                         type="email"
                         required
-                        placeholder="you@email.com"
+                        placeholder="tu@correo.com"
                         className="form-input"
                       />
                     </Field>
                   </div>
 
                   <div className="grid gap-5 sm:grid-cols-2">
-                    <Field label="Phone" htmlFor="phone">
+                    <Field label="Teléfono" htmlFor="phone">
                       <input
                         id="phone"
                         name="phone"
@@ -124,7 +125,7 @@ export function ContactForm() {
                         className="form-input"
                       />
                     </Field>
-                    <Field label="Event Date" htmlFor="date">
+                    <Field label="Fecha del Evento" htmlFor="date">
                       <input
                         id="date"
                         name="date"
@@ -136,18 +137,18 @@ export function ContactForm() {
                   </div>
 
                   <div className="grid gap-5 sm:grid-cols-2">
-                    <Field label="Number of Guests" htmlFor="guests">
+                    <Field label="Número de Invitados" htmlFor="guests">
                       <input
                         id="guests"
                         name="guests"
                         type="number"
                         min={1}
                         required
-                        placeholder="e.g. 80"
+                        placeholder="ej. 80"
                         className="form-input"
                       />
                     </Field>
-                    <Field label="Type of Event" htmlFor="eventType">
+                    <Field label="Tipo de Evento" htmlFor="eventType">
                       <select
                         id="eventType"
                         name="eventType"
@@ -156,7 +157,7 @@ export function ContactForm() {
                         className="form-input"
                       >
                         <option value="" disabled>
-                          Select an option
+                          Selecciona una opción
                         </option>
                         {eventTypes.map((type) => (
                           <option key={type} value={type}>
@@ -167,12 +168,12 @@ export function ContactForm() {
                     </Field>
                   </div>
 
-                  <Field label="Message" htmlFor="message">
+                  <Field label="Mensaje" htmlFor="message">
                     <textarea
                       id="message"
                       name="message"
                       rows={4}
-                      placeholder="Tell us about your event, menu preferences, or any questions..."
+                      placeholder="Cuéntanos sobre tu evento, preferencias de menú o cualquier duda..."
                       className="form-input resize-none"
                     />
                   </Field>
@@ -181,7 +182,7 @@ export function ContactForm() {
                     type="submit"
                     className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-[1.02]"
                   >
-                    Request Your Quote
+                    Solicita tu Cotización
                   </button>
                 </form>
               )}

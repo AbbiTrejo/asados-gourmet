@@ -5,11 +5,11 @@ import { Flame, Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const links = [
-  { label: 'Services', href: '#services' },
-  { label: 'Packages', href: '#packages' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Reviews', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Servicios', href: '#services' },
+  { label: 'Paquetes', href: '#packages' },
+  { label: 'Galería', href: '#gallery' },
+  { label: 'Reseñas', href: '#testimonials' },
+  { label: 'Contacto', href: '#contact' },
 ]
 
 export function Navbar() {
@@ -64,7 +64,7 @@ export function Navbar() {
           href="#contact"
           className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-transform hover:scale-105 md:inline-flex"
         >
-          Book Your Event
+          Reserva tu evento
         </a>
 
         <button
@@ -74,7 +74,7 @@ export function Navbar() {
             'inline-flex items-center justify-center rounded-md p-2 md:hidden',
             scrolled ? 'text-foreground' : 'text-background',
           )}
-          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={open}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -101,7 +101,7 @@ export function Navbar() {
                 onClick={() => setOpen(false)}
                 className="block rounded-full bg-primary px-5 py-3 text-center text-sm font-semibold text-primary-foreground"
               >
-                Book Your Event
+                Reserva tu evento
               </a>
             </li>
           </ul>
