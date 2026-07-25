@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { CheckCircle2, Mail, MapPin, Phone } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
+import { supabase } from '@/lib/supabase'
 
 const eventTypes = [
   'Boda',
@@ -16,10 +17,63 @@ const eventTypes = [
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
+ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault()
+
+  const form = e.currentTarget
+
+  const formData = new FormData(form)
+
+  const nombre = formData.get("name") as string
+  const correo = formData.get("email") as string
+  const telefono = formData.get("phone") as string
+  const fecha_evento = formData.get("date") as string
+  const invitados = Number(formData.get("guests"))
+  const tipo_evento = formData.get("eventType") as string
+  const mensaje = formData.get("message") as string
+
+   const { error } = await supabase
+    .from("cotizaciones")
+    .insert([
+      {
+        nombre,
+        correo,
+        telefono,
+        fecha_evento,
+        invitados,
+        tipo_evento,
+        mensaje,
+      },
+    ])
+
+ function Field({
+  label,
+  htmlFor,
+  children,
+}: {
+  label: string
+  htmlFor: string
+  children: React.ReactNode
+}) {
+  return (
+    <div className="flex flex-col gap-2">
+      <label htmlFor={htmlFor} className="text-sm font-medium text-foreground">
+        {label}
+      </label>
+      {children}
+    </div>
+  )
+}
+
+ if (error) {
+  console.error("Error de Supabase:", error)
+  alert(error.message)
+  return
+}
+
+  form.reset()
+  setSubmitted(true)
+}
 
   return (
     <section id="contact" className="relative bg-secondary py-24 lg:py-32">
